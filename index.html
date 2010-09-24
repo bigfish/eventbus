@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>EventBus test</title>
+    <script src="EventBus.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <script>
+      EventBus.defineEvent("FOO");
+      EventBus.subscribe("FOO", function(payload){ console.log("recevied payload:" + payload.eventName); }, this)
+      EventBus.publish("FOO", {eventName: "FOO"});
+    </script>
+  </body>
+</html>
